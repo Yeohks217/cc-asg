@@ -11,7 +11,7 @@ region = customregion
 
 db_conn = connections.Connection(
     host=customhost,
-    port=8501,
+    port=3306,
     user=customuser,
     password=custompass,
     db=customdb
@@ -82,5 +82,5 @@ def AddEmp():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=80, debug=True)
+    app.run(host='0.0.0.0', port=8501, debug=True)
 
