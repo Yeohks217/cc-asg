@@ -1,7 +1,7 @@
-customhost = "database-1.cizar3lczvxa.us-east-1.rds.amazonaws.com"
-customuser = "aws_user"
-custompass = "Bait3273"
-customdb = "employee"
-custombucket = "lowchoonkeat-employee1"
+customhost = "taruc-database.cuodcui1nj3v.us-east-1.rds.amazonaws.com"
+customuser = "taruc"
+custompass = "admin123456"
+customdb = "taruc"
+custombucket = "leesiaojuin-bucket"
 customregion = "us-east-1"
 
