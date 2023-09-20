@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Add Employee Information</title>
+	<style>
+		* {
+		  box-sizing: border-box;
+		}
+		body{
+			background-image: url(img/bg3.jpg);
+			background-size: cover;
+			margin: auto;
+			font-family: Arial, Helvetica, sans-serif;
+		}
+
+		.container{
+			background-color: rgba(255, 255, 255, 0.445);
+			border-radius: 30px;
+			margin-left: auto;
+			margin-right: auto;
+			width: 700px;
+			height: 1250px;
+			margin-bottom: 60px;
+		  }
+		
+		.form{
+			padding-top: 60px;
+		}
+
+		h2{
+			margin-top: 30px;
+			font-family: Arial, Helvetica, sans-serif; 
+			font-size: 25px;
+			color: rgb(81, 9, 149);
+			margin-left: 20px;
+			font-weight: 800;
+			text-align: center;
+		}
+
+		#img{
+			width: 60%;
+			font-size: 17px;
+			color:black;
+			cursor: pointer;
+			margin-left: 150px;
+			margin-top: 10px;
+			height: 50px;  
+		}
+
+		.update{
+			width: 180px;
+			height: 60px;
+			padding: 15px;
+			font-family: Arial, Helvetica, sans-serif;
+			background-color: rgb(73, 190, 15);
+			color: white;
+			margin-left: 150px;
+			border: none;
+			border-radius: 10px;
+			margin-top: 10px;
+			font-size: 15px;
+			cursor: pointer;
+			margin-right: 10px;
+		}
+
+		.getinfo{
+			width: 200px;
+			height: 60px;
+			padding: 15px;
+			font-family: Arial, Helvetica, sans-serif;
+			color: white;
+			background-color: rgb(111, 13, 149);
+			border-radius: 10px;
+			font-size: 14px;
+			margin-top: -20px;
+			border: none;
+			cursor: pointer;
+		}
+
+		.getinfo:hover{
+			color: white;
+			background-color: black;
+			border: none;
+		}
+		
+		.update:hover{
+			color: white;
+			border: none;
+			background-color: rgb(12, 153, 12);
+		}
+
+		#about{
+			text-align: center;
+			color: blue;
+			margin-left: 300px;
+	
+		}
+
+		</style>
+</head>
+	<body>
+		<h1 style="color: rgb(1, 1, 1); font-family: Arial, Helvetica, sans-serif; font-weight: 900; text-align: center; margin-top: 70px; margin-bottom: 40px;">Employee Database</h1> 
+		<div class="container">
+				
+				<form action="/addemp" autocomplete="on" method = "POST" enctype="multipart/form-data" class="form">
+
+				<h2>Create New Employee</h2> <br>
+
+				<img src="img/usericon.png" style="height: 270px; width:270px; margin-left: 220px; margin-top: -50px;"> <br>
+	
+					<p style="color:black; font-size: 17px; text-align: center; margin-left: -310px;">Employee ID</p> 
+					
+					<input style="height:30px; color:black; width: 50%; border-bottom: 1px solid black; margin-left: 150px; background: none; font-size:14pt; padding: 10px; border-left: transparent; border-top: transparent; border-right: transparent; " type="number" name="emp_id" autofocus size="40" min="0" onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))"><br><br>
+	
+					<p style="color:black; font-size: 17px; text-align: center; margin-left: -310px;">First Name</p> 
+
+					<input style="height:30px; color:black; width: 50%; border-bottom: 1px solid black; margin-left: 150px; background: none; font-size:14pt; padding: 10px; border-left: transparent; border-top: transparent; border-right: transparent; "  type="text" name="first_name" ><br><br>
+	
+					<p style="color:black; font-size: 17px; text-align: center; margin-left: -310px;">Last Name </p> 
+					
+					<input style="height:30px; color:black; width: 50%; border-bottom: 1px solid black; margin-left: 150px; background: none; font-size:14pt; padding: 10px; border-left: transparent; border-top: transparent; border-right: transparent; "  type="text" name="last_name"><br><br>
+					
+					<p style="color:black; font-size: 17px; text-align: center; margin-left: -290px;">Primary Skills</p>
+
+					<input style="height:30px; color:black; width: 50%; border-bottom: 1px solid black; margin-left: 150px; background: none; font-size:14pt; padding: 10px; border-left: transparent; border-top: transparent; border-right: transparent; "  type="text" name="pri_skill"><br><br>
+	
+					<p style="color:black; font-size: 17px; text-align: center; margin-left: -320px;">Location</p>
+					
+					<input style="height:30px; color:black; width: 50%; border-bottom: 1px solid black; margin-left: 150px; background: none; font-size:14pt; padding: 10px; border-left: transparent; border-top: transparent; border-right: transparent; " type="text" name="location"><br><br>
+					
+					<p style="color:black; font-size: 17px; text-align: center; margin-left: -330px;">Image</p>
+
+					<input type=file  id="img" name="emp_image_file"> <br><br>
+	
+					<button type="submit" class="update">Update Database</button>
+	
+					<button type="submit" class="getinfo" formaction="/getemp">Get Employee Information</button><br><br>
+				</form>		
+				<br>
+				<a href="/about" id="about">About Us</a>
+	
+		</div>
+	
+</body>
+	
+</html>
+

@@ -1,0 +1,146 @@
+	<!DOCTYPE html>
+<html>
+<head>
+	<title>Get Employee Information</title>
+	<style>
+		* {
+		  box-sizing: border-box;
+		}
+
+		body{
+			background-image: url(img/bg7.jpg);
+			background-size: cover;
+			background-repeat: no-repeat;
+			margin: auto;
+			font-family: Arial, Helvetica, sans-serif;
+		}
+
+		h1{
+			text-align: center;
+			font-family: Arial, Helvetica, sans-serif;
+			font-weight: 900;
+			margin-top: 60px;
+			font-size: 35px;
+			color:rgb(88, 10, 116);
+		}
+
+		.container {
+			background-color: rgba(255, 255, 255, 0.547);
+			content: "";
+  			clear: both;
+			margin:auto;
+			margin-top: 40px;
+			width: 1200px;
+  			display: table;
+  		}
+
+		.column{
+			float: left;
+  			width: 50%;
+  			padding: 5px;
+		}	
+		.row::after {
+  			content: "";
+  			clear: both;
+  			display: table;
+		}
+
+		.image{
+			width: 650px; 
+			height: 500px;
+			margin-top: -5px;
+			margin-left: -5px;
+			margin-bottom: -12px;
+		}
+		h2{
+			color: black; 
+			margin-left: 100px; 
+			margin-top: 80px; 
+			font-weight: 700;
+			font-family: Arial, Helvetica, sans-serif;
+			margin-bottom: 60px;
+		}
+
+		.fetch{
+			width: 300px;
+			height: 50px;
+			padding: 15px;
+			font-weight: 500;
+			color: white;
+			background-color: rgb(99, 32, 143);
+			border-radius: 10px;
+			font-size: 15px;
+			margin-top: 40px;
+			margin-left: 100px;
+			border: none;
+			font-family: Arial, Helvetica, sans-serif;
+			cursor: pointer;
+		}
+
+		.fetch:hover{
+			color: white;
+			background-color: rgb(160, 112, 205);
+			border: none;
+		}
+		
+		.database{
+			width: 300px;
+			height: 50px;
+			padding: 15px;
+			font-weight: 500;
+			color: rgb(3, 3, 3);
+			background-color: rgb(255, 255, 255);
+			border-radius: 10px;
+			font-size: 15px;
+			
+			margin-left: 100px;
+			border: none;
+			font-family: Arial, Helvetica, sans-serif;
+			cursor: pointer;
+		}
+
+		.database:hover{
+			color: white;
+			background-color: rgb(0, 0, 0);
+			border: none;
+		}
+	</style>
+</head>
+
+		<h1>Employee Information</h1>
+
+		<body>
+
+				<div class="container">	
+					<form action="/fetchdata" autocomplete="on" method="POST">
+						<div class="row"></div>
+							<div class="column">
+								<img src="img/bg5.jpg" class="image">
+							</div>
+							<div class="column">
+								<h2>Enter Employee ID</h2>
+							
+								<p style="color:black; font-size: 17px; text-align: center; margin-left: -290px; margin-top: 30px;">Employee ID</p> 
+								<input style="height:30px; color:black; width: 50%; margin-top: -10px; border-bottom: 1px solid black; margin-left: 100px; background: none; font-size:12pt; padding: 10px; border-left: transparent; border-top: transparent; border-right: transparent; " type="number" name="emp_id" autofocus size="40" min="0" onkeypress="return (event.charCode !=8 && event.charCode ==0 || (event.charCode >= 48 && event.charCode <= 57))">
+								<br><br>
+
+
+								<button type="submit" class="fetch" formaction="/getemp">Fetch Info</button><br><br>
+
+								<button type="submit" class="database" formaction="http://3.134.115.108:80/"  method="GET">Go back to Update Database</button>
+
+							</div>
+						</div>
+					</form>
+				</div>
+
+				
+
+		  		
+			
+
+		</body>
+
+
+</html>
+
