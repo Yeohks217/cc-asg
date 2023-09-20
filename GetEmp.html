@@ -1,0 +1,94 @@
+	<!DOCTYPE html>
+<html>
+<head>
+	<title>Get Employee Information</title>
+	<link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+	<style>
+		* {
+		  box-sizing: border-box;
+		}
+
+		body{
+			background-image: url(img/bg2.png);
+			background-size: cover;
+			background-repeat: no-repeat;
+			margin: auto;
+			font-family: 'Poppins';
+		}
+
+		h1{
+			text-align: center;
+			font-family: 'Poppins';
+			font-weight: 900;
+			margin-top: 60px;
+			font-size: 35px;
+			color:rgb(88, 10, 116);
+		}
+
+		.container {
+			background-color: rgba(255, 255, 255, 0.547);
+			content: "";
+  			clear: both;
+			margin:auto;
+			width: 1200px;
+  			display: table;
+  		}
+
+		.column{
+			float: left;
+  			width: 50%;
+  			padding: 5px;
+		}	
+		.row::after {
+  			content: "";
+  			clear: both;
+  			display: table;
+		}
+
+		.image{
+			width: 600px; 
+			height: 500px;
+			margin-top: -5px;
+			margin-left: -5px;
+			margin-bottom: -12px;
+		}
+		
+	</style>
+</head>
+
+		<h1>Employee Information</h1>
+
+		<body>
+
+		
+				<div class="container">	
+					<form action="/fetchdata" autocomplete="on" method="POST">
+						<div class="row"></div>
+							<div class="column">
+								<img src="img/bg1.png" class="image">
+							</div>
+							<div class="column">
+								<h2 style="color: black; margin-left: 40px; margin-top: 80px;">Enter Employee ID</h2>
+							
+								Employee ID<br> <input style="height:25px;font-size:14pt;" type="number" name="emp_id" autofocus size="40"><br><br>
+
+
+								<button type="submit" style="background: grey; height: 45px; width: 200px; color: white; size: 5; font:oblique;">FETCH INFO</button><br><br>
+
+								<button type="submit" formaction="http://3.134.115.108:80/" style="background: white	; height: 45px; width: 200px; color: black; size: 5; font:oblique;" method="GET">GO TO UPDATE DATABASE PAGE</button>
+
+							</div>
+						</div>
+					</form>
+				</div>
+
+				
+
+		  		
+			
+
+		</body>
+
+
+</html>
+
